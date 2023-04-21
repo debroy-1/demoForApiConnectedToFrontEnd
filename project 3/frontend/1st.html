@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">newsApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    </li>
+
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <h1>welcome.....</h1>
+        <br>
+        <div class="row bob">
+            <div class="card w-50">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Button</a>
+                </div>
+              </div>
+               
+        </div>
+        <br>
+        <div class="d-flex justify-content-around">
+            <button type="button" class="btn btn-primary" id="prev">previous</button>
+            <button type="button" class="btn btn-primary" id="next"> next</button>
+            </div>
+    </div>
+    <br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script>
+        let currentPage=1;
+         const v=async(page)=>{
+            var url = 'https://newsapi.org/v2/everything?' +
+                'q=&' +
+                'from=2023-04-19&' +
+                'pageSize=10&' +
+                'page='+page +
+                'languege=en&'  +
+                'sortBy=popularity&' +
+                'apiKey=474b95ac6bbd4309a14e7b0a0b3b363f';
+
+            var req = new Request(url);
+             
+            
+           let response=  {"status":"ok","totalResults":370,"articles":[{"source":{"id":"ars-technica","name":"Ars Technica"},"author":"Corey Gaskin","title":"Dealmaster: New low on 55-inch LG C2 TV and 2021 iPad Pro, and more","description":"These are the lowest prices we've seen on LG's 55-inch C2 and Apple's 2021 iPad Pro","url":"https://arstechnica.com/gadgets/2023/04/dealmaster-new-low-on-55-inch-lg-c2-tv-and-2021-ipad-pro-and-more/","urlToImage":"https://cdn.arstechnica.net/wp-content/uploads/2021/05/2021-129-inch-iPad-Pro-front-760x380.jpeg","publishedAt":"2023-04-19T00:26:07Z","content":"Enlarge/ The 2021 12.9-inch iPad Pro.\r\n0 with \r\nToday's best tech deals include LG's well-regarded C2 55-inch 4K TV and the 2021 iPad Pro at their lowest prices. The C2 and the 2021 iPad Pro are prev… [+3811 chars]"},{"source":{"id":null,"name":"Digital Trends"},"author":"Trevor Mogg","title":"Apple’s latest store opening is one of its most significant in years","description":"Apple has opened its first retail store in India, a market with huge potential for the tech giant. Apple boss Tim Cook was there to welcome the first visitors.","url":"https://www.digitaltrends.com/news/apple-first-apple-store-india/","urlToImage":"https://www.digitaltrends.com/wp-content/uploads/2023/04/apple-store-mumbai-1.jpg?resize=1200%2C630&p=1","publishedAt":"2023-04-19T03:50:08Z","content":"Skip to main content\r\nApple has opened its first retail store in India, with CEO Tim Cook  and Apple retail chief Deidre O’Brien on the door to welcome the first visitors.\r\nThe store opened in Mumbai… [+1801 chars]"},{"source":{"id":null,"name":"AppleInsider"},"author":"news@appleinsider.com (Wesley Hilliard)","title":"Trial seeking Apple Watch ban continues with witness statements","description":"Apple witnesses testify in a $3.1 billion patent lawsuit that claims industry secrets were stolen to build Apple Watch.Apple facing an Apple Watch banThe International Trade Commission backed Masimo, a medical firm suing Apple, over patent infringement allega…","url":"https://appleinsider.com/articles/23/04/19/trial-seeking-apple-watch-ban-continues-with-witness-statements","urlToImage":"https://photos5.appleinsider.com/gallery/54039-108814-Blood-oxygen-xl.jpg","publishedAt":"2023-04-19T03:20:11Z","content":"Apple facing an Apple Watch ban\r\nAppleInsider may earn an affiliate commission on purchases made through links on our site.\r\nApple witnesses testify in a $3.1 billion patent lawsuit that claims indus… [+2901 chars]"},{"source":{"id":null,"name":"heise online"},"author":"Martin Holland","title":"Kinder kommen in Kindle-App an Nacktfotos: Apple und Google warnen Amazon","description":"Kindle Unlimited bietet einen Zugriff auf Hunderttausende E-Books – auch für Kinder. Weil es da auch Nacktfotos gibt, wurde Amazon nun gewarnt.","url":"https://www.heise.de/news/E-Books-voller-Nacktfotos-in-Kindle-Unlimited-Apple-und-Google-warnen-Amazon-8971358.html","urlToImage":"https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/1/4/5/4/2/5/shutterstock_1062008978-238d41707f9aa5ef.jpg","publishedAt":"2023-04-19T06:39:00Z","content":"Apple und der Google-Mutterkonzern Alphabet haben gegenüber Amazon Bedenken geäußert, dass Minderjährige über die E-Book-App Kindle an \"sexuell eindeutige Fotos\" gelangen können und eine bessere Mode… [+3065 chars]"},{"source":{"id":null,"name":"Slashdot.org"},"author":"BeauHD","title":"Sonos' Exciting New Product Category Is Commercial Audio","description":"Today, Sonos is introducing Sonos Pro, a new service targeted at businesses -- restaurants, bars, and retail stores -- that makes it easy to play music across numerous locations without breaking any licensing rules. Sonos Pro works with all S2-compatible hard…","url":"https://entertainment.slashdot.org/story/23/04/19/046243/sonos-exciting-new-product-category-is-commercial-audio","urlToImage":"https://a.fsdn.com/sd/topics/music_64.png","publishedAt":"2023-04-19T07:00:00Z","content":"Pro customers will gain access to a web portal that lets them remotely control what's playing in each of their locations (divided into different zones) and perform troubleshooting from afar. If you'r… [+1898 chars]"},{"source":{"id":null,"name":"Macworld"},"author":"Jason Cross","title":"How to set up your HomePod to send alerts when a smoke alarm sounds","description":"Macworld\n\n\n\r\n\n\n\n\nWhen Apple announced the new 2nd-generation HomePod in January, it also announced a cool new feature called Sound Recognition. All HomePod models (1st-gen, 2nd-gen, and mini) can listen for a smoke alarm and send a notification to your iPhone…","url":"https://www.macworld.com/article/1790296/how-to-homepod-send-alert-smoke-co-alarm.html","urlToImage":"https://www.macworld.com/wp-content/uploads/2023/04/614701135.jpg?quality=50&strip=all&w=980","publishedAt":"2023-04-19T00:16:02Z","content":"Skip to contentType your search and hit enter\r\nWhen you purchase through links in our articles, we may earn a small commission. This doesn't affect our editorial independence\r\n.\r\nWhen Apple announced… [+2252 chars]"},{"source":{"id":null,"name":"Caschys Blog"},"author":"caschy","title":"Apple HomePod: Geräuscherkennung für Rauchmelder startet in Deutschland","description":"Apple hat das Erkennen von Rauchmelder-Alarmgeräuschen über die Mikrofone der HomePods nun auch in Deutschland freigeschaltet. Einmal eingerichtet, erscheint die Benachrichtigung sowohl auf dem iPhone-Sperrbildschirm als auch in der Home-App, wenn ein Rauchme…","url":"https://stadt-bremerhaven.de/apple-homepod-geraeuscherkennung-fuer-rauchmelder-startet-in-deutschland/","urlToImage":"https://stadt-bremerhaven.de/wp-content/uploads/2023/04/181shots_so_.jpg","publishedAt":"2023-04-19T04:34:05Z","content":"Apple hat das Erkennen von Rauchmelder-Alarmgeräuschen über die Mikrofone der HomePods nun auch in Deutschland freigeschaltet. Einmal eingerichtet, erscheint die Benachrichtigung sowohl auf dem iPhon… [+1203 chars]"},{"source":{"id":null,"name":"Lifehacker.ru"},"author":"Макс Вильтовский","title":"В watchOS 10 будет новый домашний экран с поддержкой папок","description":"Купертинская компания готовит крупнейшее с 2015 года обновление системы часов.","url":"https://lifehacker.ru/novyj-domashnij-ekran-v-watchos-10/","urlToImage":"https://cdn.lifehacker.ru/wp-content/uploads/2023/04/wwdc_2022_1198_10_37_44.0_1681881216-1024x512.jpg","publishedAt":"2023-04-19T05:10:30Z","content":"Apple watchOS 10, . Macrumors.\r\n , , iOS. .\r\n , . MacRumors , Dynamic IslandiPhone 14 Pro .\r\n, Apple 2015 . , .\r\n, watchOS 10 5 WWDC."},{"source":{"id":null,"name":"AppleInsider"},"author":"news@appleinsider.com (Michael Stroup)","title":"Deals: save up to 70% on Intego antivirus & internet security software for Mac","description":"Contrary to popular belief, Macs are not immune to computer viruses and malware. Now, you can protect your Mac or PC with several excellent deals from Intego, offering up to 70% in savings.Save up to 70% on Intego for Mac.Intego is offering huge discounts acr…","url":"https://appleinsider.com/articles/23/04/19/deals-save-up-to-70-on-intego-antivirus-internet-security-software-for-mac","urlToImage":"https://photos5.appleinsider.com/gallery/54025-108807-intego-antivirus-for-mac-sale-xl.jpg","publishedAt":"2023-04-19T01:43:02Z","content":"Save up to 70% on Intego for Mac.\r\nAppleInsider may earn an affiliate commission on purchases made through links on our site.\r\nContrary to popular belief, Macs are not immune to computer viruses and … [+3156 chars]"},{"source":{"id":null,"name":"Caschys Blog"},"author":"Benjamin Mamerow","title":"Apples MR-Headset soll viele angepasste Versionen von Apps und Diensten erhalten","description":"Laut Bloombergs Mark Gurman arbeitet Apple aktuell mit Hochdruck daran, eine Reihe von Software und Dienste für sein kommendes Mixed-Reality-Headset zu entwickeln. Laut internen Quellen sollen neben Spielen auch Fitness- und Kollaborations-Apps dabei sein. De…","url":"https://stadt-bremerhaven.de/apples-mr-headset-soll-viele-angepasste-versionen-von-apple-apps-und-diensten-erhalten/","urlToImage":"https://stadt-bremerhaven.de/wp-content/uploads/2020/11/apple-logo.jpg","publishedAt":"2023-04-19T05:30:17Z","content":"Laut Bloombergs Mark Gurman arbeitet Apple aktuell mit Hochdruck daran, eine Reihe von Software und Dienste für sein kommendes Mixed-Reality-Headset zu entwickeln. Laut internen Quellen sollen neben … [+2160 chars]"},{"source":{"id":null,"name":"Motley Fool"},"author":"newsfeedback@fool.com (The Daily Upside)","title":"NYC Tops the Millionaire Charts","description":"It's official: the Big Apple is the Richie Rich capital of the world, with more millionaires than Cincinnati has residents. New York has held on...","url":"https://www.fool.com/investing/2023/04/18/nyc-tops-the-millionaire-charts/","urlToImage":"https://g.foolcdn.com/editorial/images/728730/featured-daily-upside-image.jpg","publishedAt":"2023-04-19T01:00:33Z","content":"For more crisp and insightful business and economic news, subscribe to\r\nThe Daily Upside newsletter.\r\nIt's completely free and we guarantee you'll learn something new every day.\r\nIt's official: the B… [+1979 chars]"},{"source":{"id":null,"name":"Basicthinking.de"},"author":"Fabian Peters","title":"4,1 Prozent Zinsen: Apple startet Tagesgeldkonto in den USA","description":"Das Thema Zinsen ist derzeit in aller Munde. Denn: Die Europäische Zentralbank (EZB) hat die Zinswende eingeleitet. In Europa locken deshalb viele Banken mit lukrativen Renditen. Nun hat Apple in den USA für einen Paukenschlag gesorgt. Denn der iPhone-Konzern…","url":"https://www.basicthinking.de/blog/2023/04/19/41-prozent-zinsen-apple-tagesgeldkonto-usa/","urlToImage":"https://www.basicthinking.de/blog/wp-content/uploads/2023/04/apple-zinsen.jpg","publishedAt":"2023-04-19T03:55:18Z","content":"Das Thema Zinsen ist derzeit in aller Munde. Denn: Die Europäische Zentralbank (EZB) hat die Zinswende eingeleitet. In Europa locken deshalb viele Banken mit lukrativen Renditen. Nun hat Apple in den… [+2262 chars]"},{"source":{"id":null,"name":"Espinof.com"},"author":"Albertini","title":"Estrenos (19 de abril): 56 series, películas y documentales en Netflix, HBO Max, Amazon, Disney+, Filmin, Movistar Plus+ y Apple TV+","description":"¡Miércoles! Y ya sabéis lo que eso significa en Espinof... ¡Estrenos de streaming! Nueva semana y nos sentamos una vez más con la libretita para ir seleccionando lo más interesante que se estrena y en esta ocasión contamos con 56 series, películas y documenta…","url":"https://www.espinof.com/estrenos/estrenos-19-abril-series-peliculas-documentales-netflix-hbo-max-amazon-disney-plus-filmin-movistar-plus-apple-tv","urlToImage":"https://i.blogs.es/075b78/powerrangers30/840_560.jpeg","publishedAt":"2023-04-19T07:00:53Z","content":"¡Miércoles! Y ya sabéis lo que eso significa en Espinof... ¡Estrenos de streaming! Nueva semana y nos sentamos una vez más con la libretita para ir seleccionando lo más interesante que se estrena y e… [+3975 chars]"},{"source":{"id":null,"name":"Github.com"},"author":"GetFirefly","title":"Firefly – A new compiler and runtime for BEAM languages","description":"An alternative BEAM implementation, designed for WebAssembly - GitHub - GetFirefly/firefly: An alternative BEAM implementation, designed for WebAssembly","url":"https://github.com/GetFirefly/firefly","urlToImage":"https://opengraph.githubassets.com/821d25f78e1c003728594ae330ae04fb1650596bdd3139da2beb79807c400a0d/GetFirefly/firefly","publishedAt":"2023-04-19T00:38:40Z","content":"Getting Started\r\nInstallation\r\nNOTE: This section is a placeholder for the moment until we get our toolchain packaging implemented\r\nTo use Firefly, you'll need to download our toolchain here, and ins… [+24508 chars]"},{"source":{"id":null,"name":"Iphoneitalia.com"},"author":"Giuseppe La Terza","title":"Il visore Apple sarà focalizzato su sport, giochi e fitness","description":"Ci avviciniamo a grandi passi verso la WWDC di giugno, dove Apple annuncerà il suo primo visore per la realtà aumentata.\nLink all'articolo originale: Il visore Apple sarà focalizzato su sport, giochi e fitness","url":"https://www.iphoneitalia.com/808048/visore-apple-sara-focalizzato-sport-giochi-fitness","urlToImage":"https://static.iphoneitalia.com/wp-content/uploads/2023/01/visore-apple.jpg","publishedAt":"2023-04-19T06:12:23Z","content":"Apple è ormai quasi pronta per la presentazione del suo primo visore AR/VR alla WWDC di giugno e starebbe anche lavorando nella creazione di app accattivanti per incoraggiare le persone ad adottare i… [+2357 chars]"}]}
+        console.log(response)
+            let str=""
+        for(let item of response.articles) {
+
+            str = str + `<div class="card my-2 mx-3" style="width: 18rem;">
+                <img src="${item.urlToImage}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">${item.title}</h5>
+                    <p class="card-text">${item.description}</p>
+                    <a href="${item.url}"  target="_blank" class="btn btn-primary">go to the source </a>
+                </div>
+            </div>  `
+        }
+
+
+      document.querySelector(".bob").innerHTML=str
+           
+        
+         }
+         v(1)
+      
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
